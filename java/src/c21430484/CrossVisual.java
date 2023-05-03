@@ -62,7 +62,7 @@ public class CrossVisual
     }
 
 
-    public void render(int phase)
+    public void render(int phase, int direction)
     {
         cross.setFill(mv.color(208, 152, 3));
         mv.camera(0f, 0f, mv.height * .86602f, 0f, 0f, 0f, 0f, 1f, 0f);
@@ -76,72 +76,72 @@ public class CrossVisual
         // cross.rotateX(0.005f);
 
         if(phase == 1)
-            renderPhase1();
+            renderPhase1(direction);
         else if(phase == 2)
-            renderPhase2(); 
+            renderPhase2(direction); 
     }
 
-    public void renderPhase1()
+    public void renderPhase1(int direction)
     {
         if(mv.timeElapsed() > 5000)
         {
-            cross.rotateY(0.005f);
-            cross.rotateZ(0.005f);    
+            cross.rotateY(0.005f * direction);
+            cross.rotateZ(0.005f * direction);    
 
-            innerCross.rotateY(0.005f);
-            innerCross.rotateZ(0.005f);    
+            innerCross.rotateY(0.005f * direction);
+            innerCross.rotateZ(0.005f * direction);    
         }
 
         if(mv.timeElapsed() > 38700)
         {
             changeScale();
 
-            cross.rotateX(-0.0005f);   
-            innerCross.rotateX(-0.0005f);
+            cross.rotateX(-0.0005f * direction);   
+            innerCross.rotateX(-0.0005f * direction);
         }    
 
         if(mv.timeElapsed() > 125000 && mv.timeElapsed() < 137500)
         {
             if(mv.timeElapsed() < 131250)
             {
-                cross.rotateY(0.02f);
-                cross.rotateZ(0.02f);    
+                cross.rotateY(0.02f * direction);
+                cross.rotateZ(0.02f * direction);    
     
-                innerCross.rotateY(0.02f);
-                innerCross.rotateZ(0.02f);  
+                innerCross.rotateY(0.02f * direction);
+                innerCross.rotateZ(0.02f * direction);  
     
-                cross.rotateX(-0.02f);   
-                innerCross.rotateX(-0.02f);
+                cross.rotateX(-0.02f * direction);   
+                innerCross.rotateX(-0.02f * direction);
             }
             else 
             {
-                cross.rotateY(-0.02f);
-                cross.rotateZ(-0.02f);    
+                cross.rotateY(-0.02f * direction);
+                cross.rotateZ(-0.02f * direction);    
     
-                innerCross.rotateY(-0.02f);
-                innerCross.rotateZ(-0.02f);  
+                innerCross.rotateY(-0.02f * direction);
+                innerCross.rotateZ(-0.02f * direction);  
     
-                cross.rotateX(0.07f);   
-                innerCross.rotateX(0.07f);
+                cross.rotateX(0.07f * direction);   
+                innerCross.rotateX(0.07f * direction);
             }
         }
     }
 
-    public void renderPhase2()
+    public void renderPhase2(int direction)
     {
-        cross.rotateZ(0.01f);    
-        innerCross.rotateZ(0.01f);  
+        cross.rotateZ(0.01f * direction);    
+        innerCross.rotateZ(0.01f * direction);  
 
         if(mv.timeElapsed() > 170000 && mv.timeElapsed() < 187000)
         {
-            cross.rotateY(0.035f);
-            innerCross.rotateY(0.035f);
+            cross.rotateY(0.035f * direction);
+            innerCross.rotateY(0.035f * direction);
             
-            cross.rotateZ(0.045f);     
-            innerCross.rotateZ(0.045f);  
+            cross.rotateZ(0.045f * direction);     
+            innerCross.rotateZ(0.045f * direction);  
 
-            cross.rotateX(-0.02f);   
-            innerCross.rotateX(-0.02f);  
+            cross.rotateX(-0.02f * direction);   
+            innerCross.rotateX(-0.02f * direction);  
         }
     }
 }   
