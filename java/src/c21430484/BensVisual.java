@@ -23,6 +23,8 @@ public class BensVisual extends Visual
     long startTime;
     long currentTime;
 
+    int spinDirection; 
+
     public void settings()
     {
         size(1024, 700, P3D);
@@ -57,6 +59,8 @@ public class BensVisual extends Visual
         startTime = -1;
 
         background(0);
+
+        spinDirection = 1; 
     }
 
     public void keyPressed()
@@ -67,7 +71,15 @@ public class BensVisual extends Visual
             getAudioPlayer().play();
             startTime = System.currentTimeMillis();
         }
-    }
+
+        if(key == CODED)
+        {
+            if(keyCode == LEFT)
+                spinDirection = -spinDirection;
+            else if(keyCode == RIGHT)
+                spinDirection = -spinDirection;
+        }
+    }   
 
     boolean drawBackground = true; 
     
@@ -124,14 +136,14 @@ public class BensVisual extends Visual
         translate(-width/2, -height/2, 0);
         
         
-        if(timeElapsed() < 187000)
+        if(timeElapsed() < 186500)
             tbv.render(1);
         else 
             tbv.render(2);
 
         wf.render();
         
-        cv.render(1); 
+        cv.render(1, spinDirection); 
     }
     
     public void renderPhase2()
@@ -143,7 +155,7 @@ public class BensVisual extends Visual
         abv.render(1);
         
         
-        cv.render(2);
+        cv.render(2, spinDirection);
     }
 
     public long timeElapsed()

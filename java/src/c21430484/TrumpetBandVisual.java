@@ -41,16 +41,16 @@ public class TrumpetBandVisual
             {   
                 mv.translate(0, 0, -90f);
                 mv.fill(69, 50, 1);
-                mv.rect(i * gap, mv.height + 165, gap,-mv.getSmoothedBands()[i] * 0.4f); 
+                mv.rect(i * gap, mv.height + 170, gap,-mv.getSmoothedBands()[i] * 0.35f); 
                 mv.translate(0, 0, 90f);
 
                 mv.translate(0, 0, -70f);
-                mv.fill(115, 84, 1);
-                mv.rect(i * gap, mv.height + 165, gap,-mv.getSmoothedBands()[i] * 0.3f); 
+                mv.fill(97, 71, 0);
+                mv.rect(i * gap, mv.height + 165, gap,-mv.getSmoothedBands()[i] * 0.25f); 
                 mv.translate(0, 0, 70f);
                 
-                mv.fill(163, 120, 3);
-                mv.rect(i * gap, mv.height + 125, gap,-mv.getSmoothedBands()[i] * 0.2f); 
+                mv.fill(135, 99, 1);
+                mv.rect(i * gap, mv.height + 125, gap,-mv.getSmoothedBands()[i] * 0.15f); 
             }
             mv.translate(0, 0, +200f);
         }
