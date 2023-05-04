@@ -1,6 +1,7 @@
 # Music Visualiser Project
 
 | Name | Student ID |
+|-----------|-----------|
 | Ben Corran | C21430484 |
 | Caoimhin Condon | C21496054 |  
 | Evan Li | C21414026 | 
