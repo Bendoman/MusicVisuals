@@ -1,8 +1,5 @@
 package c21430484;
 
-import processing.core.*;
-
-// This is an example of a visual that renders the waveform
 public class WaveForm
 {
     BensVisual mv;
@@ -12,20 +9,13 @@ public class WaveForm
     {
         this.mv = mv;
         cy = (this.mv.height / 2) + 530;
-        // cy = cy + 350;
     }
 
     public void render()
     {
-        // mv.colorMode(PApplet.HSB);
         for(int i = 0 ; i < mv.getAudioBuffer().size() * 2 ; i ++)
         {
             mv.stroke(208, 152, 3);
-            // mv.stroke
-            // (
-            //     PApplet.map(i, 0, mv.getAudioBuffer().size(), 0, 255), 255, 255
-            // );
-
             mv.line(i, cy + 10, i, cy  + mv.getAudioBuffer().get(i/2) * 100);
         }
     }

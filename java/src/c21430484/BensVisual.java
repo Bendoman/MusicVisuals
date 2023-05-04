@@ -1,12 +1,11 @@
 package c21430484;
 
-import ddf.minim.AudioBuffer;
 import ie.tudublin.*;
+import ddf.minim.AudioBuffer;
 import processing.core.PFont;
 import processing.core.PImage;
 
-
-public class TeamVisual extends Visual
+public class BensVisual extends Visual
 {    
     WaveForm wf;
     CrossVisual cv; 
@@ -32,10 +31,9 @@ public class TeamVisual extends Visual
     public void setup()
     {
         startMinim();
-                
+
         // Call loadAudio to load an audio file to process 
         loadAudio("Genesis.mp3");   
-
         
         wf = new WaveForm(this);
         cv = new CrossVisual(this);
@@ -95,7 +93,6 @@ public class TeamVisual extends Visual
         if(drawBackground)
             background(0);
 
-
         try
         {
             // Call this if you want to use FFT data
@@ -112,7 +109,6 @@ public class TeamVisual extends Visual
         calculateAverageAmplitude();        
         
 
-
         if(startTime != -1)
         {
             if(timeElapsed() > 137500 && timeElapsed() < 186500)
@@ -122,10 +118,7 @@ public class TeamVisual extends Visual
         }
         else 
             renderPhase1();
-        
-        // renderPhase2();
     }  
-
 
     
     public void renderPhase1()
@@ -148,13 +141,14 @@ public class TeamVisual extends Visual
         cv.render(1, spinDirection); 
     }
     
+    
     public void renderPhase2()
     {
         translate(-width/2, -height/2, 0);
         cbv.render();
         popMatrix();
         
-        abv.render(1);
+        abv.render();
         
         
         cv.render(2, spinDirection);

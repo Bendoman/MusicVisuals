@@ -26,7 +26,5 @@ public class CircularWaveVisual
         {
             mv.line(PApplet.cos(j)*245, PApplet.sin(j)*245, PApplet.cos(j)*PApplet.abs(mv.getAudioBuffer().get(j))*200 + PApplet.cos(j)*245, PApplet.sin(j)*PApplet.abs(mv.getAudioBuffer().get(j))*200 + PApplet.sin(j)*245);
         }
-
-
     }
 }

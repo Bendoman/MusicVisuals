@@ -1,11 +1,9 @@
 package c21430484;
 
-import processing.core.*;
-
-// This is an example of a visual that uses the audio bands
 public class TrumpetBandVisual
 {
     BensVisual mv;
+
     int noCircles; 
     long lastIncrement = 0; 
 
@@ -24,14 +22,10 @@ public class TrumpetBandVisual
         float gap = mv.width / 1.5f / (float) mv.getBands().length;
 
         mv.noStroke();
-
-        
-        // mv.fill(PApplet.map(6, 0, mv.getBands().length, 255, 0), 255, 255);
         mv.fill(208, 152, 3);
 
         mv.rect(0, mv.height, 75, -mv.getSmoothedBands()[6] * 0.75f);  
         mv.rect(mv.width - 75, mv.height, 75,-mv.getSmoothedBands()[6] * 0.75f); 
-        
         
         if(phase == 2)
         {
@@ -93,7 +87,5 @@ public class TrumpetBandVisual
 
         mv.image(mv.justice, (mv.width/2) - 125, -100);
         mv.translate(0, -30, 175);
-
-
     }
 }

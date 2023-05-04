@@ -2,7 +2,6 @@ package c21430484;
 
 import processing.core.PApplet;
 import processing.core.PShape;
-import java.util.*;
 
 public class CrossVisual 
 {
@@ -22,7 +21,7 @@ public class CrossVisual
         this.mv = mv; 
         innerCross = mv.loadShape("innerCross.obj");
         cross = mv.loadShape("cross.obj");
-        // cross.translate(mv.width / 2, mv.height / 2);
+
         objScale = 0.8f; 
 
         cross.rotateX(+260);
@@ -71,9 +70,6 @@ public class CrossVisual
         
         innerCross.setFill(mv.color(0));
         mv.shape(innerCross);
-
-        // currentTime = System.currentTimeMillis();
-        // cross.rotateX(0.005f);
 
         if(phase == 1)
             renderPhase1(direction);
