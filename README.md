@@ -57,13 +57,21 @@ The left and right arrow keys can be pressed to change the direction of the cros
 | Justice.png | Modified screnshot from album cover |
 
 # Team member input 
+This project was completed with collaboration from all team members. The majority of development was done together, in person on the same computer, hence the majority of commits coming from a single account. 
+
 ### Ben
 I chose the song took care of modelling the cross and wrote the CrossVisual and TrumpetBandVisual classes. 
 I am most proud of the 3D representation of the cross and having it sync up correctly with the beat. 
 I learned the basics of 3D modeling in blender and how to work with audacity. 
 
 ### Caoimhin
+I wrote the majority of the AudioBandsVisual and WaveForm classes.
+I am most proud of phase 2 of the visualisation.
+I learned about frequency bands and how to use them to syncronise visuals to music. 
 
 ### Evan
+I wrote the CircularWaveVisual, craeted the piano buildup visualization near the end and collaborated with the rest. 
+I am most proud of the piano buildup visualisation.
+I learned how to use sin waves to create a circular waveform. 
 
 
