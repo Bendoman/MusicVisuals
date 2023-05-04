@@ -15,26 +15,26 @@ This is a visualization of the song Gensis by the band Justice.
 It was inspired by the album art associated with the song and the color pallete was chosen to match.
 
 The original
-![Album art](java/data/images/albumArt.jpg)
+![Album art](java/data/Images/albumArt.jpg)
 
 Our visualization
-![Our version](java/data/images/ourVersion.jpg)
+![Our version](java/data/Images/ourVersion.jpg)
 
 # Video
 [hyperlink](https://www.youtube.com/watch?v=a6ICxJysCqQ)
 
 # Screenshots
 Title screen 
-![Title screen](java/data/images/startMenu.jpg)
+![Title screen](java/data/Images/startMenu.jpg)
 
 Phase one
-![Phase one](java/data/images/Phase1.jpg)
+![Phase one](java/data/Images/Phase1.jpg)
 
 Phase one buildup
-![buildup](java/data/images/Phase1Buildup.jpg)
+![buildup](java/data/Images/Phase1Buildup.jpg)
 
 Phase two
-![Phase two](java/data/images/phase2.jpg)
+![Phase two](java/data/Images/phase2.jpg)
 
 # Instructions
 Press the spacebar to start/restart the visualization.
