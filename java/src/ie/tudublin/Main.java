@@ -7,7 +7,7 @@ public class Main
 	public void startUI()
 	{
 		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new BensVisual());		
+        processing.core.PApplet.runSketch( a, new TeamVisual());		
 	}
 
 	public static void main(String[] args)

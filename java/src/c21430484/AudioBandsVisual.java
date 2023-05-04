@@ -2,9 +2,9 @@ package c21430484;
 
 public class AudioBandsVisual
 {
-    BensVisual mv;
+    TeamVisual mv;
 
-    public AudioBandsVisual(BensVisual mv)
+    public AudioBandsVisual(TeamVisual mv)
     {
         this.mv = mv; 
     }

@@ -2,90 +2,68 @@
 
 Names:
 Ben Corran
+Caoimhin Condon
+Evan Li
 
 Student Numbers: 
 C21430484
+C21496054 
+C21414026 
 
-## Instructions
-- Fork this repository and use it a starter project for your assignment
-- Create a new package named your student number and put all your code in this package.
-- You should start by creating a subclass of ie.tudublin.Visual
-- There is an example visualiser called MyVisual in the example package
-- Check out the WaveForm and AudioBandsVisual for examples of how to call the Processing functions from other classes that are not subclasses of PApplet
+# Description 
+This is a visualization of the song Gensis by the band Justice. 
+It was inspired by the album art associated with the song and the color pallete was chosen to match.
 
-# Description of the assignment
+The original
+![Album art](java/data/images/albumArt.jpg)
+
+Our visualization
+![Our version](java/data/images/ourVersion.jpg)
+
+# Video
+[hyperlink](https://www.youtube.com/watch?v=a6ICxJysCqQ)
+
+# Screenshots
+Title screen 
+![Title screen](java/data/images/startMenu.jpg)
+
+Phase one
+![Phase one](java/data/images/Phase1.jpg)
+
+Phase one buildup
+![buildup](java/data/images/Phase1Buildup.jpg)
+
+Phase two
+![Phase two](java/data/images/phase2.jpg)
 
 # Instructions
+Press the spacebar to start/restart the visualization.
+The left and right arrow keys can be pressed to change the direction of the crosses rotation 
+(this can sometimes make the transition between phases 1 and 2 less perfect)
 
-# How it works
-
-# What I am most proud of in the assignment
-
-# Markdown Tutorial
-
-This is *emphasis*
-
-This is a bulleted list
-
-- Item
-- Item
-
-This is a numbered list
-
-1. Item
-1. Item
-
-This is a [hyperlink](http://bryanduggan.org)
-
-# Headings
-## Headings
-#### Headings
-##### Headings
-
-This is code:
-
-```Java
-public void render()
-{
-	ui.noFill();
-	ui.stroke(255);
-	ui.rect(x, y, width, height);
-	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-	ui.text(text, x + width * 0.5f, y + height * 0.5f);
-}
-```
-
-So is this without specifying the language:
-
-```
-public void render()
-{
-	ui.noFill();
-	ui.stroke(255);
-	ui.rect(x, y, width, height);
-	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-	ui.text(text, x + width * 0.5f, y + height * 0.5f);
-}
-```
-
-This is an image using a relative URL:
-
-![An image](images/p8.png)
-
-This is an image using an absolute URL:
-
-![A different image](https://bryanduggandotorg.files.wordpress.com/2019/02/infinite-forms-00045.png?w=595&h=&zoom=2)
-
-This is a youtube video:
-
-[![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
-
-This is a table:
-
-| Heading 1 | Heading 2 |
+# List of classes/assets
+| Class/Asset | Source |
 |-----------|-----------|
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
+| TeamVisual.java | Modified from original "MyVisual.java" |
+| AudioBandsVisual.java | Modified from original "AudioBandsVisual.java |
+| CircularWaveVisual.java | Self written |
+| CrossVisual.java | Self written |
+| TrumpetBandVisual | Self written (Borrows some code from Audiobands) |
+| WaveForm.java | Modified from original "WaveForm.java" |
+| cross.obj | Self made |
+| innerCross.ob | Self made |
+| Futura.ttf | Sourced online |
+| Genesis.mp3 | Downloaded from YouTube |
+| Justice.png | Modified screnshot from album cover |
+
+# Team member input 
+### Ben
+I chose the song took care of modelling the cross and wrote the CrossVisual and TrumpetBandVisual classes. 
+I am most proud of the 3D representation of the cross and having it sync up correctly with the beat. 
+I learned the basics of 3D modeling in blender and how to work with audacity. 
+
+### Caoimhin
+
+### Evan
+
 

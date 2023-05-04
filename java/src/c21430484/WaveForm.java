@@ -2,10 +2,10 @@ package c21430484;
 
 public class WaveForm
 {
-    BensVisual mv;
+    TeamVisual mv;
     float cy = 0;
 
-    public WaveForm(BensVisual mv)
+    public WaveForm(TeamVisual mv)
     {
         this.mv = mv;
         cy = (this.mv.height / 2) + 530;

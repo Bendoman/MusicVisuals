@@ -5,7 +5,7 @@ import processing.core.PShape;
 
 public class CrossVisual 
 {
-    BensVisual mv;
+    TeamVisual mv;
 
     PShape cross; 
     PShape innerCross; 
@@ -16,7 +16,7 @@ public class CrossVisual
 
     long currentTime;
 
-    public CrossVisual(BensVisual mv)
+    public CrossVisual(TeamVisual mv)
     {
         this.mv = mv; 
         innerCross = mv.loadShape("innerCross.obj");

@@ -2,12 +2,12 @@ package c21430484;
 
 public class TrumpetBandVisual
 {
-    BensVisual mv;
+    TeamVisual mv;
 
     int noCircles; 
     long lastIncrement = 0; 
 
-    public TrumpetBandVisual(BensVisual mv)
+    public TrumpetBandVisual(TeamVisual mv)
     {
         this.mv = mv; 
         this.noCircles = 1; 

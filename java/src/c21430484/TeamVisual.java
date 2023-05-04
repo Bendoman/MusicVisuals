@@ -5,7 +5,7 @@ import ddf.minim.AudioBuffer;
 import processing.core.PFont;
 import processing.core.PImage;
 
-public class BensVisual extends Visual
+public class TeamVisual extends Visual
 {    
     WaveForm wf;
     CrossVisual cv; 

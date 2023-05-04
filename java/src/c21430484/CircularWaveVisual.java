@@ -4,10 +4,10 @@ import processing.core.*;
 
 public class CircularWaveVisual 
 {
-    BensVisual mv;
+    TeamVisual mv;
     float cy = 0;
 
-    public CircularWaveVisual(BensVisual mv)
+    public CircularWaveVisual(TeamVisual mv)
     {
         this.mv = mv; 
         this.mv = mv;
