@@ -27,8 +27,8 @@ public class AudioBandsVisual
                 // mv.rect(i * gap, mv.height, gap,-mv.getSmoothedBands()[i] * 0.2f); 
                 // mv.rect(i * gap, 0, gap, mv.getSmoothedBands()[i] * 0.2f); 
     
-                mv.rect(0, i * testGap, +mv.getSmoothedBands()[i] * 0.2f, testGap);
-                mv.rect(mv.width, i * testGap, -mv.getSmoothedBands()[i] * 0.2f, testGap);
+                mv.rect(0, i * testGap, +mv.getSmoothedBands()[i] * 0.4f, testGap);
+                mv.rect(mv.width, i * testGap, -mv.getSmoothedBands()[i] * 0.4f, testGap);
             }
         }
         else if(phase == 2)

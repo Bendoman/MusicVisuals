@@ -17,12 +17,11 @@ public class TrumpetBandVisual
     }
 
     public void render(int phase)
-    {
-
+    {   
         if(mv.timeElapsed() > 235000)
             return; 
 
-        float gap = mv.width / (float) mv.getBands().length;
+        float gap = mv.width / 1.5f / (float) mv.getBands().length;
 
         mv.noStroke();
 
@@ -36,7 +35,7 @@ public class TrumpetBandVisual
         
         if(phase == 2)
         {
-            mv.translate(0, 0, -200f);
+            mv.translate((mv.width / 4 - gap), 0, -200f);
             for(int i = 0 ; i < mv.getBands().length ; i ++)
             {   
                 mv.translate(0, 0, -90f);
@@ -52,7 +51,7 @@ public class TrumpetBandVisual
                 mv.fill(135, 99, 1);
                 mv.rect(i * gap, mv.height + 125, gap,-mv.getSmoothedBands()[i] * 0.15f); 
             }
-            mv.translate(0, 0, +200f);
+            mv.translate(-(mv.width / 4 - gap), 0, +200f);
         }
 
         mv.noFill(); 
@@ -94,5 +93,7 @@ public class TrumpetBandVisual
 
         mv.image(mv.justice, (mv.width/2) - 125, -100);
         mv.translate(0, -30, 175);
+
+
     }
 }

@@ -2,14 +2,11 @@ package c21430484;
 
 import ddf.minim.AudioBuffer;
 import ie.tudublin.*;
+import processing.core.PFont;
 import processing.core.PImage;
-import processing.core.PShape;
-
-import example.*;
 
 
-
-public class BensVisual extends Visual
+public class TeamVisual extends Visual
 {    
     WaveForm wf;
     CrossVisual cv; 
@@ -25,59 +22,60 @@ public class BensVisual extends Visual
 
     int spinDirection; 
 
+    PFont font; 
+    
     public void settings()
     {
-        size(1024, 700, P3D);
-        
-        // Use this to make fullscreen
-        //fullScreen();
-
-        // Use this to make fullscreen and use P3D for 3D graphics
-        //fullScreen(P3D, SPAN); 
+        fullScreen(P3D); 
     }
 
     public void setup()
     {
         startMinim();
-        // colorMode(HSB);
                 
         // Call loadAudio to load an audio file to process 
         loadAudio("Genesis.mp3");   
 
         
-        // Call this instead to read audio from the microphone
-        // startListening(); 
-        
         wf = new WaveForm(this);
+        cv = new CrossVisual(this);
         abv = new AudioBandsVisual(this);
         tbv = new TrumpetBandVisual(this);
-        cv = new CrossVisual(this);
         cbv = new CircularWaveVisual(this);
+        font = createFont("Futura.ttf", 80);
 
+        textFont(font);
         justice = loadImage("justice.png");
 
         startTime = -1;
+        spinDirection = 1; 
 
         background(0);
-
-        spinDirection = 1; 
     }
 
     public void keyPressed()
     {
         if (key == ' ')
-        {
-            getAudioPlayer().cue(0);
-            getAudioPlayer().play();
-            startTime = System.currentTimeMillis();
+        {            
+            if(timeElapsed() > 1)
+            {
+                getAudioPlayer().pause();
+                setup();
+            }
+            else 
+            {
+                getAudioPlayer().cue(0);
+                getAudioPlayer().play();
+                startTime = System.currentTimeMillis();
+            }
         }
 
         if(key == CODED)
         {
             if(keyCode == LEFT)
-                spinDirection = -spinDirection;
+                spinDirection = -1;
             else if(keyCode == RIGHT)
-                spinDirection = -spinDirection;
+                spinDirection = 1;
         }
     }   
 
@@ -86,7 +84,6 @@ public class BensVisual extends Visual
     public void draw()
     {
         currentTime = System.currentTimeMillis();
-
         if(startTime != -1)
         {
             if((timeElapsed() > 124060 && timeElapsed() < 137500) || (timeElapsed() > 181500 && timeElapsed() < 186500))
@@ -135,8 +132,13 @@ public class BensVisual extends Visual
     {
         translate(-width/2, -height/2, 0);
         
+        if(timeElapsed() == 0)
+        {
+            textSize(80);
+            text("Press space to start", 560, height - 200);          
+        }
         
-        if(timeElapsed() < 186500)
+        if(timeElapsed() < 202500)
             tbv.render(1);
         else 
             tbv.render(2);

@@ -125,6 +125,13 @@ public class CrossVisual
                 innerCross.rotateX(0.07f * direction);
             }
         }
+
+        if(mv.timeElapsed() > 186500)
+        {
+            cross.rotateY(0.01f * direction);
+            innerCross.rotateY(0.01f * direction);
+        
+        }            
     }
 
     public void renderPhase2(int direction)
