@@ -1,14 +1,9 @@
 # Music Visualiser Project
 
-Names:
-Ben Corran
-Caoimhin Condon
-Evan Li
-
-Student Numbers: 
-C21430484
-C21496054 
-C21414026 
+| Name | Student ID |
+| Ben Corran | C21430484 |
+| Caoimhin Condon | C21496054 |  
+| Evan Li | C21414026 | 
 
 # Description 
 This is a visualization of the song Gensis by the band Justice. 
